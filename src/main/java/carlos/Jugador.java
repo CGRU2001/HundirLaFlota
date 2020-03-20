@@ -23,7 +23,7 @@ public class Jugador {
         this.bando = bando;
         mapa = new Mapa(25, 25, this.bando);
         for (int i = 0; i < 10; i++) {
-            mapa.getDimensiones()[r.nextInt(25)][r.nextInt(25)] = new Barco();
+            mapa.getDimensiones()[r.nextInt(25)][r.nextInt(25)] = new Barco(this.bando);
         }
 
         
