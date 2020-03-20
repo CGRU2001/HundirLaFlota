@@ -15,5 +15,14 @@ public class Mapa {
         this.dimensiones = new Barco[width][height];
     }
 
+    public Barco[][] getDimensiones() {
+        return dimensiones;
+    }
+
+    public void setDimensiones(Barco[][] dimensiones) {
+        this.dimensiones = dimensiones;
+    }
+    
+
     
 }
