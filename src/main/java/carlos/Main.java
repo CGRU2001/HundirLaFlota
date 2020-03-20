@@ -48,7 +48,7 @@ public class Main {
         System.out.println("Esto no vale");
         System.out.println(oposicion.getMapa());
         
-        while(oposicion.getMapa().getBarcos() != 0 || aliados.getMapa().getBarcos() != 0){
+        do{
             System.out.println("--------------------------------");
             System.out.println("Tu turno");
             System.out.println("--------------------------------");
@@ -82,7 +82,7 @@ public class Main {
                 
             }
             
-        }
+        }while(oposicion.getMapa().getBarcos() != 0 || aliados.getMapa().getBarcos() != 0);
         if(aliados.getMapa().getBarcos() == 0){
             System.out.println("Has perdido...");
         }
