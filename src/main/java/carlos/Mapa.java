@@ -13,6 +13,7 @@ public class Mapa {
 
     private Barco[][] dimensiones;
     private int equipo;
+    private int barcos = 10;
 
     public Mapa(int width, int height, int equipo) {
         this.dimensiones = new Barco[width][height];
@@ -33,6 +34,17 @@ public class Mapa {
 
     public void setEquipo(int equipo) {
         this.equipo = equipo;
+    }
+
+    public int getBarcos() {
+        return barcos;
+    }
+
+    public void setBarcos(int barcos) {
+        this.barcos = barcos;
+    }
+    public void eliminarBarco(int x, int y){
+        this.dimensiones[x][y].eliminarBarco();
     }
 
     @Override

@@ -52,6 +52,16 @@ public class Jugador {
     public void setBando(int bando) {
         this.bando = bando;
     }
+    public boolean voltear(int x, int y){
+        if(mapa.getDimensiones()[x][y] != null){
+            if(mapa.getDimensiones()[x][y].isDisponible()){
+                return true;
+            }
+            return false;
+        }else{
+            return false;
+        }
+    }
     
     
     

@@ -12,6 +12,7 @@ import java.util.Random;
 public class Barco {
     private int equipo; // Sólo podrá tener los valores 0 o 1
     private int ref;
+    private boolean disponible;
 
     public Barco(int equipo) {
         Random r = new Random();
@@ -22,12 +23,14 @@ public class Barco {
         }
         
         this.ref = Math.abs(r.nextInt());
+        this.disponible = true;
     }
 
     public Barco(){
         Random r = new Random();
         this.equipo = r.nextInt(2);
         this.ref = Math.abs(r.nextInt());
+        this.disponible = true;
     }
     
     
@@ -55,6 +58,17 @@ public class Barco {
     public void setRef(int ref) {
         this.ref = ref;
     }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+    
+    
+    
+    public void eliminarBarco(){
+        this.disponible = false;
+    }
+    
 
     @Override
     public String toString() {
