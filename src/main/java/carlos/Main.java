@@ -45,8 +45,7 @@ public class Main {
         Jugador oposicion = new Jugador(player2, 0);
 
         System.out.println(aliados.getMapa());
-        System.out.println("Esto no vale");
-        System.out.println(oposicion.getMapa());
+
         
         do{
             System.out.println("--------------------------------");
