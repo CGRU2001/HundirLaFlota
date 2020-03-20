@@ -24,6 +24,11 @@ public class Barco {
         this.ref = Math.abs(r.nextInt());
     }
 
+    public Barco(){
+        Random r = new Random();
+        this.equipo = r.nextInt(2);
+        this.ref = Math.abs(r.nextInt());
+    }
     
     
     public int getEquipo() {
