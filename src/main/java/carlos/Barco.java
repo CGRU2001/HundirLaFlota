@@ -33,6 +33,15 @@ public class Barco {
     public void setEquipo(int equipo) {
         this.equipo = equipo;
     }
+    public void setEquipo(String equipo){
+        if(equipo.equalsIgnoreCase("aliado")){
+            this.equipo = 1;
+        }
+        else if(equipo.equalsIgnoreCase("enemigo")){
+            this.equipo = 0;
+        }
+        // Si no coincide con ninguno de los dos, no hace nada
+    }
 
     public int getRef() {
         return ref;
