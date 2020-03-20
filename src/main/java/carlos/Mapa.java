@@ -10,9 +10,13 @@ package carlos;
  * @author carlos
  */
 public class Mapa {
+
     private Barco[][] dimensiones;
-    public Mapa(int width, int height){
+    private int equipo;
+
+    public Mapa(int width, int height, int equipo) {
         this.dimensiones = new Barco[width][height];
+        this.equipo = equipo;
     }
 
     public Barco[][] getDimensiones() {
@@ -22,7 +26,31 @@ public class Mapa {
     public void setDimensiones(Barco[][] dimensiones) {
         this.dimensiones = dimensiones;
     }
-    
 
-    
+    public int getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(int equipo) {
+        this.equipo = equipo;
+    }
+
+    @Override
+    public String toString() {
+        for (int i = 0; i < this.dimensiones.length; i++) {
+            for (int j = 0; j < this.dimensiones[i].length; j++) {
+                try {
+                    if (dimensiones[i][j].getEquipo() == this.equipo) {
+
+                        System.out.println(dimensiones[i][j].toString() + " y se encuentra en la posición " + i + "X" + j);
+
+                    }
+                } catch (NullPointerException npe) {
+                    System.out.print("");
+                }
+            }
+        }
+        return "";
+    }
+
 }

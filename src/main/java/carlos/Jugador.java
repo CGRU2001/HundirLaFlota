@@ -5,22 +5,28 @@
  */
 package carlos;
 
+import java.util.Random;
+
 /**
  *
  * @author carlos
  */
 public class Jugador {
-    public Mapa mapa;
-    public String nombre;
+    private Mapa mapa;
+    private String nombre;
+    private int bando;
+    
 
-    public Jugador(String nombre) {
+    public Jugador(String nombre, int bando) {
+        Random r = new Random();
         this.nombre = nombre;
-        mapa = new Mapa(25, 25);
-        for (int i = 0; i < mapa.getDimensiones().length; i++) {
-            for (int j = 0; j < mapa.getDimensiones()[i].length; j++) {
-                mapa.getDimensiones()[i][j] = new Barco();
-            }
+        this.bando = bando;
+        mapa = new Mapa(25, 25, this.bando);
+        for (int i = 0; i < 10; i++) {
+            mapa.getDimensiones()[r.nextInt(25)][r.nextInt(25)] = new Barco();
         }
+
+        
     }
 
     public Mapa getMapa() {
@@ -37,6 +43,14 @@ public class Jugador {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getBando() {
+        return bando;
+    }
+
+    public void setBando(int bando) {
+        this.bando = bando;
     }
     
     
