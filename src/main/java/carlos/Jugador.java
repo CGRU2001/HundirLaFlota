@@ -22,6 +22,22 @@ public class Jugador {
             }
         }
     }
+
+    public Mapa getMapa() {
+        return mapa;
+    }
+
+    public void setMapa(Mapa mapa) {
+        this.mapa = mapa;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
     
     
     
