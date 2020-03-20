@@ -45,6 +45,7 @@ public class Mapa {
     }
     public void eliminarBarco(int x, int y){
         this.dimensiones[x][y].eliminarBarco();
+        this.barcos--;
     }
 
     @Override
